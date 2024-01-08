@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="height: 100%;
+    width: 100vw;">
+        <img class="img1" style="width: 100%;"
+            src="/wunderlust-request/screencapture-wunderlust-django-onrender-2024-01-07-12_43_19.png" alt="">
+    </div>
+    <script>
+        let img = document.querySelector(".img1");
+        let clickCount = 0;
+        img.addEventListener("click", () => {
+            clickCount++;
+            if (clickCount === 1) {
+                alert("Please wait, we are redirecting to the origin page. Thank you for your patience.");
+                window.location.href = 'https://wunderlust-django.onrender.com';
+            } else if (clickCount >= 2) {
+                alert("We are working on the request. Please wait. I appreciate your valuable time.");
+            }
+        });
+        var renderServerURL = 'https://wunderlust-django.onrender.com';
+        // Creating a new XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
+        // Open a GET request to the render server URL
+        xhr.open('GET', renderServerURL, true);
+        xhr.send();
+
+    </script>
+</body>
+
+</html>
