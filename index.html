@@ -18,10 +18,10 @@
         img.addEventListener("click", () => {
             clickCount++;
             if (clickCount === 1) {
-                alert("Please wait, we are redirecting to the origin page. Thank you for your patience.");
+                alert("Please wait, we are redirecting to the render server. It usually takes about a few seconds to start. Thank you for your patience.");
                 window.location.href = 'https://wunderlust.onrender.com';
             } else if (clickCount >= 2) {
-                alert("We are working on the request. Please wait. I appreciate your valuable time.");
+                alert("We are working on the request. Please wait. Alternatively, you can refresh the page and click on it again.");
             }
         });
         var renderServerURL = 'https://wunderlust-django.onrender.com';
